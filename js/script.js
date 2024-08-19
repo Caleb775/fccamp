@@ -25,22 +25,127 @@ console.log(thirdRead);
 thirdRead = "now read";
 
 // when asigning numbers to variables you do not need '' or "";
-// this is how you can use numbers
-let count = 8;
+// this is how you can use numbers or an array
+const character = "#";
+const count = 8;
+const rows = [];
 console.log(count + 1); // this will log 9
 
 // this is an empty array []
 // this is an array with strings, all arrays start at 0 and not 1
-let rows = ["Naomi","Quincy","CamperChan"];
+let stri = ["Naomi","Quincy","CamperChan"];
 // you can log this like normal and chose an array by
-console.log(rows[1]);
+console.log(stri[1]);
 // arrays can also be changed
-rows[2] = 10;
-console.log(rows) // the second array would have been CamperChan but was changed to
+stri[2] = 10;
+console.log(stri) // the second array would have been CamperChan but was changed to
 // the number 10
 
 // when you want to grab the last array especially when you dont know how
 // many there are, you can use the "array name" and .length -1
-rows[rows.length - 1];
+console.log(stri[stri.length - 3]);
+
+// now do everything that you leared from the notes
+let cities = ["London", "New York", "Mumbai"];
+cities[1] = "Mexico City";
+cities[2] = "Tokyo";
+console.log(cities);
+cities = ["Austin", "Mexico City", "Tokyo"];
+cities[1] = "London";
+cities[2] = "New York";
+cities.push("Atlanta");
+console.log(cities);
+
+// .push() is how you can push a value to the end of an array
+// must be before a console.log
+// I will place the example on line 54
+
+// .pop() is how you remove the last value in a array
+// all will be removed, jane will remain even though it was
+// pushed to the end, its not appart of the original array.
+let nombre = ["john", "jeff", "joe"];
+nombre.push("jane");
+console.log(nombre);
+
+let extra = nombre.pop("jeff");
+console.log(extra);
+
+// let variables can be changed
+// const variables can not be changed
+
+/* const rage = 11;
+rage = 12; // this will throw an error 
+*/
+
+// basic for loops
+/*  for (iterator; condition; iteration-statement) {
+    logic;
+  } */
+
+// i is commonly used as the iterator
+// you will use let do declare the i first
+/*  for (let i = 0; condition; iteration-statement) {
+    logic;
+  } */
+
+  // The condition of a for loop tells the loop how many times it should iterate. 
+  // When the condition becomes false
+  // a Boolean value can be either true or false
+  // in this example, the Boolean is true. Our count is 8 and i is 0, so i is less than 8
+  /*  for (let i = 0; i < count ; iteration-statement) {
+    logic;
+  } */
+
+  // because of the let variable in the first iteration you can reasign i
+  // in the iteration-statement section
+  // now i has been reasigned to i = i + 1 and is no longer i = 0;
+  /* for (let i = 0; i < count; -here- i = i + 1) {
+    logic;
+  } */
+
+  // now for our logic we can just log it and see if our for loop
+  // executes properly
+  
+  for (let i = 0; i < count; i = i + 1) {
+    console.log(i);
+  }
+  
+
+  // now lets push
+  // we will use p instead of i so we can log it
+  for (let p = 0; p < count; /* here */ p = p + 1) {
+    rows.push(character.repeat(p + 1));
+    
+  }
+    let result = "";
+  console.log(result);
+
+  // now we will do a for...of loop
+  /* Example
+  for (const value of iterable) {
+    Logic;
+} */
+// you can use const because the variable only exists for a single iteration
+
+// this will assign row to all items in the rows array
+  /* for (const row of rows) {
+  
+}
+  */
+
+// next example we did something called concatenation
+// concatenation is the action of linking things together in a series
+ /* for (const row of rows) {
+  result = result + row;
+}
+ */
+// to make thing go vertical we need to use the special escape sequence \n
+
+for (const row of rows) {
+  result = result + "\n" + row;
+}
 
 
+console.log(result);
+
+  
