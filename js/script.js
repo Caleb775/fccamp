@@ -148,4 +148,107 @@ for (const row of rows) {
 
 console.log(result);
 
+// const txt = ["Hello", "world", "welcome"];
+// const text = "Hello world, welcome to the universe.";
+
+// const res = txt.includes("Hello", 15);
+// const result2 = text.includes("rld");
+
+// console.log(res);
+// console.log(result2);
+// console.log(true == '');
+// console.log('1' == 1);
+
+// const str5 = "Hello";
+// const str6 = "World 1234";
+
+// function mergeTwoStrings(str5, str6) {
+//   let rap = '';
+//   let m = 0; // Initialize m outside the loop
+//   let minLength = Math.min(str5.length, str6.length);
   
+//   // Merge common parts of both strings
+//   for (let j = 0; j < minLength; j++) {
+//     rap += str5[j] + str6[j];
+//   }
+  
+//   // Add remaining characters from str5 if any
+//   while (m < str5.length) {
+//     rap += str5[m];
+//     m++;
+//   }
+  
+//   // Add remaining characters from str6 if any
+//   while (m < str6.length) {
+//     rap += str6[m];
+//     m++;
+//   }
+
+//   return rap;
+// }
+
+// console.log(mergeTwoStrings(str5, str6)); // "HWeolrllod 1234"
+
+
+// how to mesrge arrays together
+const str5 = "Hello";
+const str6 = "World 1234";
+
+function mergeTwoStrings(str5, str6) {
+  let rap = '';
+  let m = 0;
+  
+  // Merge common parts of both strings
+  while (m < str5.length && m < str6.length) {
+    rap += str5[m] + str6[m];
+    m++;
+  }
+  
+  // Add remaining characters from str5 if any
+  while (m < str5.length) {
+    rap += str5[m];
+    m++;
+  }
+  
+  // Add remaining characters from str6 if any
+  while (m < str6.length) {
+    rap += str6[m];
+    m++;
+  }
+
+  return rap;
+}
+
+console.log(mergeTwoStrings(str5, str6)); // "HWeolrllod 1234"
+
+
+// how to flatten an array
+// this is interview level 
+const nestedArray = [1, [2, 3], [4, [5, 6]]];
+const flattenedArray = nestedArray.flat(2); // Depth of 2
+console.log(flattenedArray); // [1, 2, 3, 4, 5, 6]
+
+
+//example number two form youtube frontend interview with correct answer.
+const arr = [0, [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],[13, [14,15]]];
+
+function flattenTheArray(val) {
+  const rac = []
+    for(let i = 0; i < val.length; i++){
+      if(Array.isArray(val[i])){
+         rac.push(...flattenTheArray(val[i]));
+      }else{
+        rac.push(val[i]);
+      }
+    }
+    return rac;
+}
+const flaaat = flattenTheArray(arr);
+console.log(flaaat);
+
+
+//this and the above syntax are essentially the same
+// const arr = [0, [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],[13, [14,15]]];
+// const flaaat = arr.flat(2);
+// console.log(flaaat);
+
