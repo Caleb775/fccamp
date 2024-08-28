@@ -251,4 +251,5 @@ console.log(flaaat);
 // const arr = [0, [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],[13, [14,15]]];
 // const flaaat = arr.flat(2);
 // console.log(flaaat);
+//gonna see if this opens to ffcamp repository
 
